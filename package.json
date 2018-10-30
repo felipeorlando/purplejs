@@ -4,7 +4,10 @@
   "description": "A little bit of React",
   "main": "./dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "eslint ./src/**/*",
+    "build": "npm run clean && webpack",
+    "compile": "npm run clean && tsc",
+    "clean": "del dist"
   },
   "keywords": [
     "react",
@@ -21,6 +24,7 @@
     ]
   },
   "devDependencies": {
+    "del-cli": "^1.1.0",
     "eslint": "^5.8.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.14.0",
