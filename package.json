@@ -4,6 +4,9 @@
   "description": "A little bit of React",
   "main": "./dist/index.js",
   "scripts": {
+    "test": "jest --config ./jest.config.json",
+    "test:watch": "npm test -- --watch",
+    "test:coverage": "npm test -- --coverage",
     "lint": "eslint .",
     "build": "npm run clean && webpack",
     "compile": "npm run clean && tsc",
@@ -24,14 +27,18 @@
     ]
   },
   "devDependencies": {
+    "@types/jest": "^23.3.9",
     "del-cli": "^1.1.0",
     "eslint": "^5.8.0",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^21.26.2",
     "eslint-plugin-node": "^8.0.0",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "eslint-plugin-typescript": "^0.12.0",
+    "jest": "^23.6.0",
+    "ts-jest": "^23.10.4",
     "ts-loader": "^5.2.2",
     "typescript": "^3.1.4",
     "typescript-eslint-parser": "^20.0.0"
