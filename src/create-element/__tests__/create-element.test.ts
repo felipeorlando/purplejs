@@ -34,4 +34,20 @@ describe('createElement', () => {
       })
     })
   })
+
+  context('when element is a p with text child', () => {
+    it('returns type as p with text child', () => {
+      const result = createElement(
+        'p',
+        null,
+        'Paragraph',
+      )
+      expect(result).toEqual({
+        type: 'p', 
+        props: {
+          children: ['Paragraph']
+        }
+      })
+    })
+  })
 })
