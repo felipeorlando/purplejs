@@ -1,8 +1,8 @@
 import ifElse from '../index'
 
 describe('ifElse', () => {
-  const ifCase = () => 'Assert IF condition'
-  const elseCase = () => 'Assert ELSE condition'
+  const ifCase = 'Assert IF condition'
+  const elseCase = 'Assert ELSE condition'
 
   context('when condition passes', () => {
     it('should return the first function', () => {
@@ -10,8 +10,8 @@ describe('ifElse', () => {
         true,
         ifCase,
         elseCase,
-      )()
-      expect(result).toEqual(ifCase())
+      )
+      expect(result).toEqual(ifCase)
     })
   })
 
@@ -21,8 +21,8 @@ describe('ifElse', () => {
         false,
         ifCase,
         elseCase,
-      )()
-      expect(result).toEqual(elseCase())
+      )
+      expect(result).toEqual(elseCase)
     })
   })
 });
