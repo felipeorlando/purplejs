@@ -4,14 +4,18 @@ describe('createElement', () => {
   context('when element is a simple div', () => {
     it('returns type as div without props', () => {
       const result = createElement('div', null)
-      expect(result).toEqual({ type: 'div', props: null })
+      expect(result).toEqual({ type: 'div', props: null, children: null })
     })
   })
 
   context('when element is a div with props', () => {
     it('returns type as div with props', () => {
       const result = createElement('div', { className: 'purple' })
-      expect(result).toEqual({ type: 'div', props: { className: 'purple' } })
+      expect(result).toEqual({
+        type: 'div', 
+        props: { className: 'purple' },
+        children: null,
+      })
     })
   })
 
@@ -25,12 +29,11 @@ describe('createElement', () => {
       )
       expect(result).toEqual({
         type: 'div', 
-        props: {
-          children: [
-            { type: 'p', props: null },
-            { type: 'p', props: null },
-          ]
-        }
+        props: null,
+        children: [
+          { type: 'p', props: null, children: null },
+          { type: 'p', props: null, children: null },
+        ]
       })
     })
   })
@@ -44,9 +47,8 @@ describe('createElement', () => {
       )
       expect(result).toEqual({
         type: 'p', 
-        props: {
-          children: ['Paragraph']
-        }
+        props: null,
+        children: ['Paragraph'],
       })
     })
   })
