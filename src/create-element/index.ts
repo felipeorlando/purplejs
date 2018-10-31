@@ -15,8 +15,8 @@ export default (
   config: object,
   ...args: any[]
 ): ElementObject => {
-  const rawChildren: any[] = hasArguments(args) ? [...args] : [];
-  const children: any[] = validateArguments(rawChildren)
+  const rawChildren: object[] = hasArguments(args) ? [...args] : [];
+  const children: object[] = validateArguments(rawChildren)
   const props: object = ifElse(
     hasArguments(children),
     Object.assign({}, config, { children }),
