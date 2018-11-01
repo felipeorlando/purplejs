@@ -2,8 +2,8 @@ import ElementObject from '../../interfaces/element-object'
 import render from '../../render/index'
 
 export default (
-  children: object[],
-  element: HTMLElement
+  element: HTMLElement,
+  children: object[]
 ): void => {
   children.forEach((child: ElementObject) => {
     const childElement = render(child)

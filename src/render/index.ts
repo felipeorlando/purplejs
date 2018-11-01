@@ -10,7 +10,7 @@ export default (node: ElementObject | string): Text | HTMLElement => {
 
   addPropsToElement(node, element)
 
-  addChildrenToElement(children, element)
+  addChildrenToElement(element, children)
 
   return element
 }
