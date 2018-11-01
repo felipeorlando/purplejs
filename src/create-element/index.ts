@@ -1,8 +1,4 @@
-interface ElementObject {
-  type: string;
-  props: object;
-  children: Array<object> | null;
-}
+import ElementObject from '../interfaces/element-object'
 
 export default (
   type: string,
