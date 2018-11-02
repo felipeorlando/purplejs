@@ -1,6 +1,7 @@
 import ElementObject from '../../../interfaces/element-object'
 import HTMLElement from '../../../interfaces/html-element'
 import ifElse from '../../if-else/index'
+import keyIsEvent from '../key-is-event/index'
 
 const addEvent = (
   node: ElementObject,
@@ -18,8 +19,6 @@ const addProperty = (
 ): void => {
   element[key] = node.props[key]  
 }
-
-const keyIsEvent = (key) => key.startsWith('on')
 
 export default (
   node: ElementObject,

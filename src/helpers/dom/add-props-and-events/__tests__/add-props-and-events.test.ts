@@ -1,6 +1,6 @@
 import addPropsAndEvents from '../index'
 
-describe('dom addProps', () => {
+describe('dom addPropsAndEvents', () => {
   context('when receive null properties', () => {
     it('should have a dom element with children empty', () => {
       const node = { type: 'div', props: null, children: null }
