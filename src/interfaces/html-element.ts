@@ -1,3 +1,3 @@
 export default interface HTMLElement {
-  [key:string]: any;
+  [key:string]: any
 }
