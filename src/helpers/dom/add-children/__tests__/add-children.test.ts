@@ -1,6 +1,6 @@
 import addChildrenToElement from '../index'
 
-describe('addChildrenToElement', () => {
+describe('dom addChildren', () => {
   context('when not receive children', () => {
     it('should have a dom element with children empty', () => {
       const dom = document.createElement('div')

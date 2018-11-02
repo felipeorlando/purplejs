@@ -1,6 +1,6 @@
 import ElementObject from '../interfaces/element-object'
-import addPropsToElement from '../helpers/add-props-to-element/index'
-import addChildrenToElement from '../helpers/add-children-to-element/index'
+import addPropsAndEvents from '../helpers/dom/add-props-and-events/index'
+import addChildren from '../helpers/dom/add-children/index'
 
 export default (node: ElementObject | string): Text | HTMLElement => {
   if (typeof node === 'string') return document.createTextNode(node)
@@ -8,9 +8,9 @@ export default (node: ElementObject | string): Text | HTMLElement => {
   const element: HTMLElement = document.createElement(node.type)
   const children: object[] = node.children || []
 
-  addPropsToElement(node, element)
+  addPropsAndEvents(node, element)
 
-  addChildrenToElement(element, children)
+  addChildren(element, children)
 
   return element
 }

@@ -1,13 +1,13 @@
-import addPropsToElement from '../index'
+import addPropsAndEvents from '../index'
 
-describe('addPropsToElement', () => {
+describe('dom addProps', () => {
   context('when receive null properties', () => {
     it('should have a dom element with children empty', () => {
       const node = { type: 'div', props: null, children: null }
       const element = document.createElement(node.type)
       const elementToModify = document.createElement(node.type)
     
-      addPropsToElement(node, elementToModify)
+      addPropsAndEvents(node, elementToModify)
     
       expect(element).toEqual(elementToModify)
     })
@@ -19,9 +19,21 @@ describe('addPropsToElement', () => {
       const node = { type: 'div', props, children: null }
       const element = document.createElement(node.type)
     
-      addPropsToElement(node, element)
+      addPropsAndEvents(node, element)
     
       expect(element.className).toEqual(props.className)
+    })
+  })
+
+  context('when receive events', () => {
+    it('should not add as a prop', () => {
+      const props = { onChange: () => {} }
+      const node = { type: 'div', props, children: null }
+      const element = document.createElement(node.type)
+    
+      addPropsAndEvents(node, element)
+
+      expect(element.onchange).toBeNull()
     })
   })
 })
