@@ -3,22 +3,21 @@ import removePropsAndEvents from '../index'
 
 describe('dom removePropsAndEvents', () => {
   context('when receive properties', () => {
-    it('should have a dom element with children empty', () => {
+    it('should have a dom with children empty', () => {
       const props = { className: 'purple', id: 'unique' }
-      const node = { type: 'div', props, children: null }
-      const element = document.createElement(node.type)
+      const element = { type: 'div', props, children: null }
+      const dom = document.createElement(element.type)
       
       const nullProps = { className: null, id: null }
-      const nullableNode = { type: 'div', props: nullProps, children: null }
-      const nullableElement = document.createElement(nullableNode.type)
+      const nullableElement = { type: 'div', props: nullProps, children: null }
+      const nullableDom = document.createElement(nullableElement.type)
 
-    
-      addPropsAndEvents(node, element)
-      removePropsAndEvents(node, element)
+      addPropsAndEvents(element, dom)
+      removePropsAndEvents(dom, props)
 
-      addPropsAndEvents(nullableNode, nullableElement)
+      addPropsAndEvents(nullableElement, nullableDom)
     
-      expect(element).toEqual(nullableElement)
+      expect(dom).toEqual(nullableDom)
     })
   })
 })

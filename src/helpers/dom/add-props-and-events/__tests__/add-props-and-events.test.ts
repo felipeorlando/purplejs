@@ -3,37 +3,37 @@ import addPropsAndEvents from '../index'
 describe('dom addPropsAndEvents', () => {
   context('when receive null properties', () => {
     it('should have a dom element with children empty', () => {
-      const node = { type: 'div', props: null, children: null }
-      const element = document.createElement(node.type)
-      const elementToModify = document.createElement(node.type)
+      const element = { type: 'div', props: null, children: null }
+      const dom = document.createElement(element.type)
+      const domToModify = document.createElement(element.type)
     
-      addPropsAndEvents(node, elementToModify)
+      addPropsAndEvents(element, domToModify)
     
-      expect(element).toEqual(elementToModify)
+      expect(dom).toEqual(domToModify)
     })
   })
 
   context('when receive properties', () => {
     it('should have a dom element with properly children', () => {
       const props = { className: 'purple' }
-      const node = { type: 'div', props, children: null }
-      const element = document.createElement(node.type)
+      const element = { type: 'div', props, children: null }
+      const dom = document.createElement(element.type)
     
-      addPropsAndEvents(node, element)
+      addPropsAndEvents(element, dom)
     
-      expect(element.className).toEqual(props.className)
+      expect(dom.className).toEqual(props.className)
     })
   })
 
   context('when receive events', () => {
     it('should not add as a prop', () => {
       const props = { onChange: () => {} }
-      const node = { type: 'div', props, children: null }
-      const element = document.createElement(node.type)
+      const element = { type: 'div', props, children: null }
+      const dom = document.createElement(element.type)
     
-      addPropsAndEvents(node, element)
+      addPropsAndEvents(element, dom)
 
-      expect(element.onchange).toBeNull()
+      expect(dom.onchange).toBeNull()
     })
   })
 })

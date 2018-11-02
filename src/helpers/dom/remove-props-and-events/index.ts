@@ -4,37 +4,32 @@ import ifElse from '../../if-else/index'
 import keyIsEvent from '../key-is-event/index'
 
 const removeEvent = (
-  node: ElementObject,
-  element: HTMLElement,
+  dom: HTMLElement,
   key: string,
 ): void => {
   const eventType = key.toLowerCase().substring(2);
-  element.removeEventListener(eventType, node[key]);
+  const oldEvent = dom[eventType]
+  dom.removeEventListener(eventType, oldEvent);
 }
 
 const removeProperty = (
-  node: ElementObject,
-  element: HTMLElement,
+  dom: HTMLElement,
   key: string,
 ): void => {
-  element[key] = null
+  dom[key] = null
 }
 
 export default (
-  node: ElementObject,
-  element: HTMLElement
+  dom: HTMLElement,
+  props: object,
 ): void => {
-  const propKeys: string[] = Object.keys(node.props || {})
-
-  if (!propKeys.length) return;
+  const propKeys: string[] = Object.keys(props || {})
    
-  propKeys.forEach(key => {
+  propKeys.forEach((key: string) => {
     ifElse(
       keyIsEvent(key),
-      removeEvent(node, element, key),
-      removeProperty(node, element, key)
+      removeEvent(dom, key),
+      removeProperty(dom, key)
     )
   })
 }
-
-export { removeEvent, removeProperty }

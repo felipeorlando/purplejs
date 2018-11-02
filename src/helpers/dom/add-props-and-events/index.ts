@@ -4,35 +4,35 @@ import ifElse from '../../if-else/index'
 import keyIsEvent from '../key-is-event/index'
 
 const addEvent = (
-  node: ElementObject,
-  element: HTMLElement,
+  element: ElementObject,
+  dom: HTMLElement,
   key: string,
 ): void => {
   const eventType = key.toLowerCase().substring(2);
-  element.addEventListener(eventType, node[key]);
+  dom.addEventListener(eventType, element[key]);
 }
 
 const addProperty = (
-  node: ElementObject,
-  element: HTMLElement,
+  element: ElementObject,
+  dom: HTMLElement,
   key: string,
 ): void => {
-  element[key] = node.props[key]  
+  dom[key] = element.props[key]  
 }
 
 export default (
-  node: ElementObject,
-  element: HTMLElement
+  element: ElementObject,
+  dom: HTMLElement
 ): void => {
-  const propKeys: string[] = Object.keys(node.props || {})
+  const propKeys: string[] = Object.keys(element.props || {})
 
   if (!propKeys.length) return;
    
   propKeys.forEach(key => {
     ifElse(
       keyIsEvent(key),
-      addEvent(node, element, key),
-      addProperty(node, element, key)
+      addEvent(element, dom, key),
+      addProperty(element, dom, key)
     )
   })
 }

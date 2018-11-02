@@ -2,15 +2,15 @@ import ElementObject from '../interfaces/element-object'
 import addPropsAndEvents from '../helpers/dom/add-props-and-events/index'
 import addChildren from '../helpers/dom/add-children/index'
 
-export default (node: ElementObject | string): Text | HTMLElement => {
-  if (typeof node === 'string') return document.createTextNode(node)
+export default (element: ElementObject | string): HTMLElement | Text => {
+  if (typeof element === 'string') return document.createTextNode(element)
 
-  const element: HTMLElement = document.createElement(node.type)
-  const children: object[] = node.children || []
+  const dom: HTMLElement = document.createElement(element.type)
+  const children: object[] = element.children || []
 
-  addPropsAndEvents(node, element)
+  addPropsAndEvents(element, dom)
 
-  addChildren(element, children)
+  addChildren(dom, children)
 
-  return element
+  return dom
 }
