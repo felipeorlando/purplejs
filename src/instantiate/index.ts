@@ -1,7 +1,7 @@
 import ElementObject from '../interfaces/element-object'
 import Instance from '../interfaces/instance'
 import render from '../render/index'
-import updatePropsAndEvents from '../helpers/dom/update-props-and-events/index'
+import updatePropsAndEvents from '../dom/update-props-and-events/index'
 import appendChildrens from './append-childrens/index'
 
 const instantiate = (element: ElementObject): Instance => {

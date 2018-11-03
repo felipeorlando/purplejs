@@ -1,6 +1,6 @@
-import ElementObject from '../../../interfaces/element-object'
-import HTMLElement from '../../../interfaces/html-element'
-import ifElse from '../../if-else/index'
+import ElementObject from '../../interfaces/element-object'
+import HTMLElement from '../../interfaces/html-element'
+import ifElse from '../../helpers/if-else/index'
 import keyIsEvent from '../key-is-event/index'
 
 const addEvent = (

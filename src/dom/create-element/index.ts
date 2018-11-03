@@ -1,4 +1,4 @@
-import ElementObject from '../interfaces/element-object'
+import ElementObject from '../../interfaces/element-object'
 
 export default (
   type: string,
