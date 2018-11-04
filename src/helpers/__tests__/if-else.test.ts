@@ -1,4 +1,4 @@
-import ifElse from '../index'
+import ifElse from '../if-else'
 
 describe('ifElse', () => {
   const ifCase = 'Assert IF condition'

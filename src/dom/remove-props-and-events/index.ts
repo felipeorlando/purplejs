@@ -1,6 +1,6 @@
 import ElementObject from '../../interfaces/element-object'
 import HTMLElement from '../../interfaces/html-element'
-import ifElse from '../../helpers/if-else/index'
+import ifElse from '../../helpers/if-else'
 import keyIsEvent from '../key-is-event/index'
 
 const removeEvent = (
