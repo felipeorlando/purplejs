@@ -5,7 +5,7 @@ import addChildren from '../add-children/index'
 export default (element: ElementObject | string): HTMLElement | Text => {
   if (typeof element === 'string') return document.createTextNode(element)
 
-  const dom: HTMLElement = document.createElement(element.type)
+  const dom: HTMLElement = document.createElement(element.type as string)
   const children: Object[] = element.children || []
 
   addPropsAndEvents(element, dom)
