@@ -1,27 +1,12 @@
-import ElementObject from '../../interfaces/element-object'
 import HTMLElement from '../../interfaces/html-element'
 import ifElse from '../../helpers/if-else'
 import keyIsEvent from '../key-is-event/index'
-
-const removeEvent = (
-  dom: HTMLElement,
-  key: string,
-): void => {
-  const eventType = key.toLowerCase().substring(2);
-  const oldEvent = dom[eventType]
-  dom.removeEventListener(eventType, oldEvent);
-}
-
-const removeProperty = (
-  dom: HTMLElement,
-  key: string,
-): void => {
-  dom[key] = null
-}
+import removeEvent from './remove-event'
+import removeProperty from './remove-property'
 
 export default (
   dom: HTMLElement,
-  props: object,
+  props: Object,
 ): void => {
   const propKeys: string[] = Object.keys(props || {})
    
