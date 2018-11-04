@@ -7,7 +7,8 @@ export default (
   internalInstance: Instance | object,
 ): Component => {
   const { type, props } = element
-  const publicInstance = new type(props)
+  const typeComponent: any = type
+  const publicInstance = new typeComponent(props)
 
   publicInstance._internalInstance = internalInstance
   
