@@ -1,6 +1,6 @@
-import ElementObject from '../interfaces/element-object'
-import addPropsAndEvents from '../dom/add-props-and-events/index'
-import addChildren from '../dom/add-children/index'
+import ElementObject from '../../interfaces/element-object'
+import addPropsAndEvents from '../add-props-and-events/index'
+import addChildren from '../add-children/index'
 
 export default (element: ElementObject | string): HTMLElement | Text => {
   if (typeof element === 'string') return document.createTextNode(element)

@@ -1,12 +1,12 @@
 import ElementObject from '../../interfaces/element-object'
-import render from '../../render/index'
+import createDOM from '../create-dom/index'
 
 export default (
   dom: HTMLElement,
   children: Object[]
 ): void => {
   children.forEach((child: ElementObject) => {
-    const childElement = render(child)
+    const childElement = createDOM(child)
     dom.appendChild(childElement)
   })
 }

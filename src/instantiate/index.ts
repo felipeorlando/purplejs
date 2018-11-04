@@ -1,9 +1,8 @@
 import ElementObject from '../interfaces/element-object'
 import Instance from '../interfaces/instance'
-import render from '../render/index'
+import createDOM from '../dom/create-dom/index'
 import updatePropsAndEvents from '../dom/update-props-and-events/index'
-import appendChildrens from './append-childrens/index'
-import Component from '../component/index';
+import appendChildrens from './append-childrens'
 import instantiateComponent from './instantiate-component'
 
 const isElementDOM = (element: ElementObject): Boolean => {
@@ -12,7 +11,7 @@ const isElementDOM = (element: ElementObject): Boolean => {
 
 const instantiateDOM = (element: ElementObject): Instance => {
   const { children } = element
-  const dom: HTMLElement | Text = render(element)
+  const dom: HTMLElement | Text = createDOM(element)
 
   updatePropsAndEvents(dom, element)
 

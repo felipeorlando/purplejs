@@ -1,5 +1,5 @@
 import instantiate from '../index'
-import render from '../../render/index'
+import createDOM from '../../dom/create-dom/index'
 
 describe('instantiate', () => {
   context('when receives simple element', () => {
@@ -8,7 +8,7 @@ describe('instantiate', () => {
     
     describe('instace.dom', () => {
       it('should be a dom rendered element', () => {
-        const dom = render(element)
+        const dom = createDOM(element)
         expect(instance.dom).toEqual(dom)
       })
     })
