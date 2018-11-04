@@ -2,23 +2,8 @@ import ElementObject from '../../interfaces/element-object'
 import HTMLElement from '../../interfaces/html-element'
 import ifElse from '../../helpers/if-else'
 import keyIsEvent from '../key-is-event/index'
-
-const addEvent = (
-  element: ElementObject,
-  dom: HTMLElement,
-  key: string,
-): void => {
-  const eventType = key.toLowerCase().substring(2);
-  dom.addEventListener(eventType, element[key]);
-}
-
-const addProperty = (
-  element: ElementObject,
-  dom: HTMLElement,
-  key: string,
-): void => {
-  dom[key] = element.props[key]  
-}
+import addEvent from './add-event'
+import addProperty from './add-property'
 
 export default (
   element: ElementObject,
@@ -36,5 +21,3 @@ export default (
     )
   })
 }
-
-export { addEvent, addProperty }
