@@ -2,8 +2,8 @@ import Instance from '../interfaces/instance'
 import updateInstance from './update-instance'
 
 export default class Component {
-  props: object
-  state: object
+  props: Object
+  state: Object
   render: Function
   _internalInstance: Instance
 
@@ -12,7 +12,7 @@ export default class Component {
     this.state = this.state || {}
   }
 
-  setState(partialState: object): void {
+  setState(partialState: Object): void {
     this.state = Object.assign({}, this.state, partialState)
     updateInstance(this._internalInstance)
   }

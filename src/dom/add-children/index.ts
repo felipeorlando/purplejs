@@ -3,7 +3,7 @@ import render from '../../render/index'
 
 export default (
   dom: HTMLElement,
-  children: object[]
+  children: Object[]
 ): void => {
   children.forEach((child: ElementObject) => {
     const childElement = render(child)
