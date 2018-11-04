@@ -1,38 +1,13 @@
 import Instance from '../interfaces/instance'
 import HTMLElement from '../interfaces/html-element'
 import ElementObject from '../interfaces/element-object'
-import instantiate from '../instantiate/index'
 import updatePropsAndEvents from '../dom/update-props-and-events/index'
 import reconcileChildren from './reconcile-children'
+import instantiateAndAppendIt from './instantiate-and-append-it'
+import removeChildAndNull from './remove-child-and-null'
+import newInstanceAndReplaceChild from './new-instance-and-replace-child'
 
-const instantiateAndAppendIt = (
-  element: ElementObject,
-  parentDOM: HTMLElement,
-): Instance => {
-  const instance: Instance = instantiate(element)
-  parentDOM.appendChild(instance.dom)
-  return instance
-}
-
-const removeChildAndNull = (
-  parentDOM: HTMLElement,
-  dom: HTMLElement,
-): null => {
-  parentDOM.removeChild(dom)
-  return null
-}
-
-const newInstanceAndReplaceChild = (
-  element: ElementObject,
-  parentDOM: HTMLElement,
-  dom: HTMLElement
-): Instance => {
-  const intance: Instance = instantiate(element)
-  parentDOM.replaceChild(intance.dom, dom)
-  return intance
-}
-
-const reconcile = (
+export default (
   instance: Instance,
   parentDOM: HTMLElement,
   element: ElementObject,
@@ -73,5 +48,3 @@ const reconcile = (
     return newInstance
   }
 }
-
-export default reconcile
