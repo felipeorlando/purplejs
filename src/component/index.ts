@@ -7,7 +7,7 @@ export default class Component {
   render: Function
   _internalInstance: Instance
 
-  constructor(props) {
+  constructor(props: Object) {
     this.props = props
     this.state = this.state || {}
   }
