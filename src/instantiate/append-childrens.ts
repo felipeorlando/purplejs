@@ -1,6 +1,6 @@
-import ElementObject from '../../interfaces/element-object'
-import Instance from '../../interfaces/instance'
-import instantiate from '../index'
+import ElementObject from '../interfaces/element-object'
+import Instance from '../interfaces/instance'
+import instantiate from './index'
 
 export default (
   parentDOM: HTMLElement | Text,
