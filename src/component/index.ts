@@ -4,7 +4,8 @@ import updateInstance from './update-instance'
 export default class Component {
   props: object
   state: object
-  instance: Instance
+  render: Function
+  _internalInstance: Instance
 
   constructor(props) {
     this.props = props
@@ -13,6 +14,6 @@ export default class Component {
 
   setState(partialState: object): void {
     this.state = Object.assign({}, this.state, partialState)
-    updateInstance(this.instance)
+    updateInstance(this._internalInstance)
   }
 }
