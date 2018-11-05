@@ -1,6 +1,7 @@
 import instantiate from '../index'
 import createDOM from '../../dom/create-dom/index'
 
+
 describe('instantiate', () => {
   context('when receives simple element', () => {
     const element = { type: 'div', props: null }

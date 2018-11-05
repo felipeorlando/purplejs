@@ -1,3 +1,4 @@
+import HTMLElement from '../interfaces/html-element'
 import ElementObject from '../interfaces/element-object'
 import Instance from '../interfaces/instance'
 import instantiate from './index'

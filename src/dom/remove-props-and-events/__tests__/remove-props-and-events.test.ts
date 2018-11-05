@@ -12,12 +12,12 @@ describe('dom removePropsAndEvents', () => {
       const nullableElement = { type: 'div', props: nullProps, children: null }
       const nullableDom = document.createElement(nullableElement.type)
 
-      addPropsAndEvents(element, dom)
-      removePropsAndEvents(dom, props)
+      const clonedDOM = addPropsAndEvents(element, dom)
+      const clonedDOMWithoutProps = removePropsAndEvents(dom, props)
 
-      addPropsAndEvents(nullableElement, nullableDom)
+      const modifiedNullableDom = addPropsAndEvents(nullableElement, nullableDom)
     
-      expect(dom).toEqual(nullableDom)
+      expect(clonedDOMWithoutProps).toEqual(modifiedNullableDom)
     })
   })
 })

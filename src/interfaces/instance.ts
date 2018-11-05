@@ -1,3 +1,4 @@
+import HTMLElement from './html-element'
 import ElementObject from './element-object'
 import Component from '../component/index'
 

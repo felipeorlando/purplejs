@@ -7,14 +7,17 @@ import removeProperty from './remove-property'
 export default (
   dom: HTMLElement,
   props: Object,
-): void => {
+): HTMLElement => {
+  const clonedDOM: HTMLElement = dom.cloneNode()
   const propKeys: string[] = Object.keys(props || {})
    
   propKeys.forEach((key: string) => {
     ifElse(
       keyIsEvent(key),
-      removeEvent(dom, key),
-      removeProperty(dom, key)
+      removeEvent(clonedDOM, key),
+      removeProperty(clonedDOM, key)
     )
   })
+
+  return clonedDOM
 }

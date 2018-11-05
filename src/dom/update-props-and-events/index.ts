@@ -7,8 +7,8 @@ export default (
   dom: HTMLElement,
   element: ElementObject,
   prevElement: ElementObject | null = null
-): void => {
-  if (prevElement) removePropsAndEvents(dom, prevElement.props)
+): HTMLElement => {
+  if (prevElement) return removePropsAndEvents(dom, prevElement.props)
 
-  addPropsAndEvents(element, dom)
+  return addPropsAndEvents(element, dom)
 }
