@@ -7,13 +7,17 @@ export default class Component {
   render: Function
   _internalInstance: Instance
 
-  constructor(props: Object) {
+  constructor(props: Object = {}) {
     this.props = props
     this.state = this.state || {}
   }
 
   setState(partialState: Object): void {
     this.state = Object.assign({}, this.state, partialState)
-    updateInstance(this._internalInstance)
+    this.updateInternalInstance(this._internalInstance)
+  }
+
+  updateInternalInstance(instance: Instance): void {
+    updateInstance(instance)
   }
 }

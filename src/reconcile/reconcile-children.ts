@@ -1,6 +1,6 @@
 import Instance from '../interfaces/instance'
 import ElementObject from '../interfaces/element-object'
-import reconcile from './index'
+import { reconcile } from './index'
 
 export default (
   instance: Instance, 

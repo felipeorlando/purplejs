@@ -1,6 +1,6 @@
 import ElementObject from '../interfaces/element-object'
 import HTMLElement from '../interfaces/html-element'
-import reconcile from '../reconcile/index'
+import { reconcile } from '../reconcile/index'
 
 let rootInstance = null
 

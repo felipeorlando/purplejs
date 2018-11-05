@@ -7,7 +7,7 @@ import newInstanceAndReplaceChild from './new-instance-and-replace-child'
 import updateInstaceByType from './update-instance-by-type'
 import instanceOfComponent from './instantance-of-component'
 
-export default (
+const reconcile = (
   instance: Instance,
   parentDOM: HTMLElement,
   element: ElementObject,
@@ -22,3 +22,5 @@ export default (
 
   return instanceOfComponent(instance, element, parentDOM)
 }
+
+export { reconcile }
