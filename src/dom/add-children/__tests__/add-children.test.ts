@@ -1,4 +1,4 @@
-import addChildrenToElement from '../index'
+import addChildren from '../index'
 
 describe('dom addChildren', () => {
   context('when not receive children', () => {
@@ -6,9 +6,9 @@ describe('dom addChildren', () => {
       const dom = document.createElement('div')
       const children = []
     
-      addChildrenToElement(dom, children)
+      const domWithChildren = addChildren(dom, children)
     
-      expect(dom.children.length).toEqual(0)
+      expect(domWithChildren.children.length).toEqual(0)
     })
   })
 
@@ -16,16 +16,22 @@ describe('dom addChildren', () => {
     const dom = document.createElement('div')
     const children = [{ type: 'a', props: null, children: null }]
 
-    it('should have a dom with 1 children', () => {
-      addChildrenToElement(dom, children)
+    it('should have a same dom const to be immutable', () => {
+      const domWithChildren = addChildren(dom, children)
     
-      expect(dom.children.length).toEqual(1)
+      expect(dom.children.length).toEqual(0)
+    })
+
+    it('should have a dom with 1 children', () => {
+      const domWithChildren = addChildren(dom, children)
+    
+      expect(domWithChildren.children.length).toEqual(1)
     })
 
     it('should have a dom with children with nodeName A', () => {
-      addChildrenToElement(dom, children)
+      const domWithChildren = addChildren(dom, children)
     
-      expect(dom.children[0].nodeName).toEqual("A")
+      expect(domWithChildren.children[0].nodeName).toEqual("A")
     })
   })
 })
