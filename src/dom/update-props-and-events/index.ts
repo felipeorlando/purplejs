@@ -8,7 +8,12 @@ export default (
   element: ElementObject,
   prevElement: ElementObject | null = null
 ): HTMLElement => {
-  if (prevElement) return removePropsAndEvents(dom, prevElement.props)
 
-  return addPropsAndEvents(element, dom)
+  const emptyDOM: HTMLElement | null = prevElement
+    ? removePropsAndEvents(dom, prevElement.props)
+    : null
+
+  const emptyOrFilledDOM = emptyDOM || dom
+
+  return addPropsAndEvents(element, emptyOrFilledDOM)
 }
