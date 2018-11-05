@@ -1,4 +1,5 @@
 import ElementObject from '../../interfaces/element-object'
+import HTMLElement from '../../interfaces/html-element'
 import addPropsAndEvents from '../add-props-and-events/index'
 import addChildren from '../add-children/index'
 
@@ -8,8 +9,8 @@ export default (element: ElementObject | string): HTMLElement | Text => {
   const dom: HTMLElement = document.createElement(element.type as string)
   const children: Object[] = element.children || []
 
-  addPropsAndEvents(element, dom)
-  addChildren(dom, children)
+  const domWithProps: HTMLElement = addPropsAndEvents(element, dom)
+  const domWithChildren: HTMLElement = addChildren(domWithProps, children)
 
-  return dom
+  return domWithChildren
 }
