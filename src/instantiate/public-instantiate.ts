@@ -4,13 +4,13 @@ import Component from '../component/index'
 
 export default (
   element: ElementObject,
-  internalInstance: Instance | object,
+  instance: Instance | object,
 ): Component => {
   const { type, props } = element
-  const typeComponent: any = type
-  const publicInstance = new typeComponent(props)
+  const TypeComponent: any = type
+  const publicInstance = new TypeComponent(props)
 
-  publicInstance._internalInstance = internalInstance
+  publicInstance._internalInstance = instance
   
   return publicInstance
 }
