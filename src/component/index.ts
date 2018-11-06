@@ -1,11 +1,12 @@
 import Instance from '../interfaces/instance'
+import ElementObject from '../interfaces/element-object'
 import updateInstance from './update-instance'
 
 export default class Component {
   props: Object
   state: Object
-  render: Function
   _internalInstance: Instance
+  render(): any {}
 
   constructor(props: Object = {}) {
     this.props = props

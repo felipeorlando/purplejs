@@ -12,7 +12,6 @@ describe('Component', () => {
   
       it('should not set another component properties', () => {
         expect(component.state).toEqual({})
-        expect(component.render).toEqual(undefined)
         expect(component._internalInstance).toEqual(undefined)
       })
     })
