@@ -7,5 +7,5 @@ export default (
   key: string,
 ): void => {
   const eventType = key.toLowerCase().substring(2);
-  dom.addEventListener(eventType, element[key]);
+  dom.addEventListener(eventType, element.props[key]);
 }

@@ -7,13 +7,8 @@ export default (
   dom: HTMLElement,
   element: ElementObject,
   prevElement: ElementObject | null = null
-): HTMLElement => {
+): void => {
+  if (prevElement) removePropsAndEvents(dom, prevElement.props)
 
-  const emptyDOM: HTMLElement | null = prevElement
-    ? removePropsAndEvents(dom, prevElement.props)
-    : null
-
-  const emptyOrFilledDOM = emptyDOM || dom
-
-  return addPropsAndEvents(element, emptyOrFilledDOM)
+  addPropsAndEvents(element, dom)
 }

@@ -7,18 +7,14 @@ import addProperty from './add-property'
 export default (
   element: ElementObject,
   dom: HTMLElement,
-): HTMLElement => {
+): void => {
   const propKeys: string[] = Object.keys(element.props || {})
 
-  if (!propKeys.length) return dom;
-  
-  const clonedDOM: HTMLElement = dom.cloneNode()
-   
+  if (!propKeys.length) return
+
   propKeys.forEach(key => {
     keyIsEvent(key)
-    ? addEvent(element, clonedDOM, key)
-    : addProperty(element, clonedDOM, key)
+    ? addEvent(element, dom, key)
+    : addProperty(element, dom, key)
   })
-
-  return clonedDOM
 }

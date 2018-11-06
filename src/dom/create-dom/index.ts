@@ -9,8 +9,8 @@ export default (element: ElementObject | string): HTMLElement | Text => {
   const dom: HTMLElement = document.createElement(element.type as string)
   const children: Object[] = element.children || []
 
-  const domWithProps: HTMLElement = addPropsAndEvents(element, dom)
-  const domWithChildren: HTMLElement = addChildren(domWithProps, children)
+  addPropsAndEvents(element, dom)
+  addChildren(dom, children)
 
-  return domWithChildren
+  return dom
 }
