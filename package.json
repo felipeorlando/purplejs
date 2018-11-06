@@ -1,6 +1,6 @@
 {
   "name": "purplejs",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "A little bit of React",
   "main": "./dist/index.js",
   "scripts": {
