@@ -1,0 +1,1 @@
+{"version":3,"file":"remove-event.js","sourceRoot":"","sources":["../../../src/dom/remove-props-and-events/remove-event.ts"],"names":[],"mappings":"AAGA,eAAe,CACb,GAAgB,EAChB,GAAW,EACL,EAAE;IACR,MAAM,SAAS,GAAG,GAAG,CAAC,WAAW,EAAE,CAAC,SAAS,CAAC,CAAC,CAAC,CAAC;IACjD,MAAM,QAAQ,GAAG,GAAG,CAAC,SAAS,CAAC,CAAA;IAC/B,GAAG,CAAC,mBAAmB,CAAC,SAAS,EAAE,QAAQ,CAAC,CAAC;AAC/C,CAAC,CAAA"}

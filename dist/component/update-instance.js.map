@@ -1,0 +1,1 @@
+{"version":3,"file":"update-instance.js","sourceRoot":"","sources":["../../src/component/update-instance.ts"],"names":[],"mappings":"AAGA,OAAO,EAAE,SAAS,EAAE,MAAM,oBAAoB,CAAA;AAE9C,eAAe,CAAC,QAAkB,EAAQ,EAAE;IAC1C,MAAM,SAAS,GAAgB,QAAQ,CAAC,GAAG,CAAC,UAAU,CAAA;IACtD,MAAM,OAAO,GAAkB,QAAQ,CAAC,OAAO,CAAA;IAE/C,SAAS,CAAC,QAAQ,EAAE,SAAS,EAAE,OAAO,CAAC,CAAA;AACzC,CAAC,CAAA"}

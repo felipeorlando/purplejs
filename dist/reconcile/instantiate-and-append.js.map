@@ -1,0 +1,1 @@
+{"version":3,"file":"instantiate-and-append.js","sourceRoot":"","sources":["../../src/reconcile/instantiate-and-append.ts"],"names":[],"mappings":"AAGA,OAAO,WAAW,MAAM,sBAAsB,CAAA;AAE9C,eAAe,CACb,OAAsB,EACtB,SAAsB,EACZ,EAAE;IACZ,MAAM,QAAQ,GAAa,WAAW,CAAC,OAAO,CAAC,CAAA;IAC/C,SAAS,CAAC,WAAW,CAAC,QAAQ,CAAC,GAAG,CAAC,CAAA;IACnC,OAAO,QAAQ,CAAA;AACjB,CAAC,CAAA"}
