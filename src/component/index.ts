@@ -1,5 +1,4 @@
 import Instance from '../interfaces/instance'
-import ElementObject from '../interfaces/element-object'
 import updateInstance from './update-instance'
 
 export default class Component {
