@@ -4,11 +4,16 @@ import { reconcile } from '../reconcile/index'
 
 let rootInstance = null
 
-export default (
+const render = (
   element: ElementObject,
   container: HTMLElement,
 ): void => {
   const prevInstance = rootInstance
   const nextInstance = reconcile(prevInstance, container, element)
   rootInstance = nextInstance
+}
+
+export {
+  rootInstance,
+  render,
 }
