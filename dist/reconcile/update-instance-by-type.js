@@ -3,6 +3,6 @@ import reconcileChildren from './reconcile-children';
 export default (instance, element) => {
     updatePropsAndEvents(instance.dom, element, instance.element);
     const childInstances = reconcileChildren(instance, element);
-    const newInstance = Object.assign({}, instance, { element, childInstances });
+    const newInstance = Object.assign(instance, { element, childInstances });
     return newInstance;
 };

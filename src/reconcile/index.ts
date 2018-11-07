@@ -7,6 +7,21 @@ import newInstanceAndReplaceChild from './new-instance-and-replace-child'
 import updateInstaceByType from './update-instance-by-type'
 import instanceOfComponent from './instantance-of-component'
 
+const isDomOrText = (element: ElementObject): Boolean => {
+  return typeof element === 'string' || typeof element.type === 'string'
+}
+
+const prevDiffOfNew = (
+  prevElement: ElementObject,
+  newElement: ElementObject
+) => {
+  if (typeof prevElement === 'string' || typeof newElement === 'string') {
+    return prevElement !== newElement
+  }
+
+  return prevElement.type !== newElement.type
+}
+
 const reconcile = (
   instance: Instance,
   parentDOM: HTMLElement,
@@ -16,9 +31,13 @@ const reconcile = (
 
   if (element === null) return removeChild(parentDOM, instance.dom)
 
-  if (instance.element.type !== element.type) return newInstanceAndReplaceChild(element, parentDOM, instance.dom)
+  if (prevDiffOfNew(instance.element, element)) {
+    return newInstanceAndReplaceChild(element, parentDOM, instance.dom)
+  }
   
-  if (typeof element.type === 'string') return updateInstaceByType(instance, element)
+  if (isDomOrText(element)) {
+    return updateInstaceByType(instance, element)
+  }
 
   return instanceOfComponent(instance, element, parentDOM)
 }

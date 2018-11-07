@@ -5,7 +5,7 @@ export default (element) => {
     const publicInstance = publicInstantiate(element, instance);
     const childElement = publicInstance.render();
     const childInstance = instantiate(childElement);
-    const newInstance = Object.assign({}, instance, {
+    const newInstance = Object.assign(instance, {
         element,
         publicInstance,
         dom: childInstance.dom,
