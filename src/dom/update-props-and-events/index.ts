@@ -8,7 +8,9 @@ export default (
   element: ElementObject,
   prevElement: ElementObject | null = null
 ): void => {
-  if (prevElement) removePropsAndEvents(dom, prevElement.props)
+  if (prevElement && prevElement.props) {
+    removePropsAndEvents(dom, prevElement.props)
+  }
 
   addPropsAndEvents(element, dom)
 }

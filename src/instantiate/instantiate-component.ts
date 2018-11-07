@@ -10,7 +10,6 @@ export default (element: ElementObject): Instance => {
   const childInstance = instantiate(childElement)
 
   const newInstance = Object.assign(
-    {},
     instance,
     {
       element,

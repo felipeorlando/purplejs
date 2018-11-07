@@ -10,7 +10,6 @@ export default (
   updatePropsAndEvents(instance.dom, element, instance.element)
   const childInstances: Instance[] = reconcileChildren(instance, element)
   const newInstance = Object.assign(
-    {},
     instance,
     { element, childInstances }
   )

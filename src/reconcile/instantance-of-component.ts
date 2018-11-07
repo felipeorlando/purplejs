@@ -8,7 +8,7 @@ export default (
   element: ElementObject,
   parentDOM: HTMLElement,
 ) => {
-  instance.publicInstance.props = element.props
+  instance.publicInstance.props = element.props || null
 
   const childElement = instance.publicInstance.render()
   const oldChildInstance = instance.childInstances[0]
@@ -16,7 +16,6 @@ export default (
   const childInstance = reconcile(oldChildInstance, parentDOM, childElement)
 
   const newInstance = Object.assign(
-    {},
     instance,
     {
       dom: childInstance.dom,
