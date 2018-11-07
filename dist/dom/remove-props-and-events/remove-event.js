@@ -3,4 +3,3 @@ export default (dom, key) => {
     const oldEvent = dom[eventType];
     dom.removeEventListener(eventType, oldEvent);
 };
-//# sourceMappingURL=remove-event.js.map

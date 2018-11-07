@@ -4,4 +4,3 @@ export default (element, parentDOM, dom) => {
     parentDOM.replaceChild(intance.dom, dom);
     return intance;
 };
-//# sourceMappingURL=new-instance-and-replace-child.js.map

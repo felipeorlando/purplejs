@@ -11,4 +11,3 @@ export default (element, dom) => {
             : addProperty(element, dom, key);
     });
 };
-//# sourceMappingURL=index.js.map

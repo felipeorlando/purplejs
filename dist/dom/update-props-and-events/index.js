@@ -5,4 +5,3 @@ export default (dom, element, prevElement = null) => {
         removePropsAndEvents(dom, prevElement.props);
     addPropsAndEvents(element, dom);
 };
-//# sourceMappingURL=index.js.map

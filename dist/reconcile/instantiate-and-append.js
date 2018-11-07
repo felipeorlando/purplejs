@@ -4,4 +4,3 @@ export default (element, parentDOM) => {
     parentDOM.appendChild(instance.dom);
     return instance;
 };
-//# sourceMappingURL=instantiate-and-append.js.map

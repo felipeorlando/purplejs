@@ -4,4 +4,3 @@ export default (instance) => {
     const element = instance.element;
     reconcile(instance, parentDOM, element);
 };
-//# sourceMappingURL=update-instance.js.map

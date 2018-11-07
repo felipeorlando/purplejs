@@ -6,4 +6,3 @@ export default (element) => {
         ? instantiateDOM(element)
         : instantiateComponent(element);
 };
-//# sourceMappingURL=index.js.map

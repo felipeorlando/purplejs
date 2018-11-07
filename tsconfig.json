@@ -5,8 +5,7 @@
     "module": "es6",
     "jsx": "react",
     "jsxFactory": "createElement", 
-    "esModuleInterop": true,
-    "sourceMap": true
+    "esModuleInterop": true
   },
   "include": [
     "src/**/*"

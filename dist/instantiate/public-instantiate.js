@@ -4,4 +4,3 @@ export default (element, instance) => {
     publicInstance._internalInstance = instance;
     return publicInstance;
 };
-//# sourceMappingURL=public-instantiate.js.map

@@ -6,4 +6,3 @@ const render = (element, container) => {
     rootInstance = nextInstance;
 };
 export { rootInstance, render, };
-//# sourceMappingURL=index.js.map

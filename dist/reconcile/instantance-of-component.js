@@ -11,4 +11,3 @@ export default (instance, element, parentDOM) => {
     });
     return newInstance;
 };
-//# sourceMappingURL=instantance-of-component.js.map

@@ -15,4 +15,3 @@ const reconcile = (instance, parentDOM, element) => {
     return instanceOfComponent(instance, element, parentDOM);
 };
 export { reconcile };
-//# sourceMappingURL=index.js.map

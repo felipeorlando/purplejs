@@ -7,4 +7,3 @@ export default (parentDOM, children) => {
     childDoms.forEach(childDom => parentDOM.appendChild(childDom));
     return childInstances;
 };
-//# sourceMappingURL=append-childrens.js.map

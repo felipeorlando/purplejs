@@ -6,4 +6,3 @@ export default (instance, element) => {
     const newInstance = Object.assign({}, instance, { element, childInstances });
     return newInstance;
 };
-//# sourceMappingURL=update-instance-by-type.js.map

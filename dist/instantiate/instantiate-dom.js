@@ -8,4 +8,3 @@ export default (element) => {
     const childInstances = appendChildrens(dom, children);
     return { dom, element, childInstances };
 };
-//# sourceMappingURL=instantiate-dom.js.map

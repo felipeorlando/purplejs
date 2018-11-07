@@ -9,4 +9,3 @@ export default (dom, props) => {
             : removeProperty(dom, key);
     });
 };
-//# sourceMappingURL=index.js.map

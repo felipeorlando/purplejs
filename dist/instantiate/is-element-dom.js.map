@@ -1,1 +1,0 @@
-{"version":3,"file":"is-element-dom.js","sourceRoot":"","sources":["../../src/instantiate/is-element-dom.ts"],"names":[],"mappings":"AAEA,eAAe,CAAC,OAAsB,EAAW,EAAE;IACjD,IAAI,OAAO,OAAO,KAAK,QAAQ;QAAE,OAAO,IAAI,CAAA;IAE5C,IAAI,OAAO,OAAO,CAAC,IAAI,KAAK,QAAQ;QAAE,OAAO,IAAI,CAAA;IAEjD,OAAO,KAAK,CAAA;AACd,CAAC,CAAA"}

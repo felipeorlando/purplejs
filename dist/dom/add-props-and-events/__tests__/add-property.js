@@ -8,4 +8,3 @@ describe('dom addProperty', () => {
         expect(dom.className).toEqual(props.className);
     });
 });
-//# sourceMappingURL=add-property.js.map

@@ -1,1 +1,0 @@
-{"version":3,"file":"index.js","sourceRoot":"","sources":["../../../src/dom/create-element/index.ts"],"names":[],"mappings":"AAEA,eAAe,CACb,IAAY,EACZ,KAAa,EACb,GAAG,IAA4B,EAChB,EAAE;IACjB,MAAM,QAAQ,GAAG,IAAI,CAAC,MAAM,CAAC,CAAC,CAAC,EAAE,CAAC,MAAM,CAAC,GAAG,IAAI,CAAC,CAAC,CAAC,CAAC,IAAI,CAAC;IACzD,OAAO,EAAE,IAAI,EAAE,KAAK,EAAE,QAAQ,EAAE,CAAA;AAClC,CAAC,CAAA"}

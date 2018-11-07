@@ -13,4 +13,3 @@ export default class Component {
         updateInstance(instance);
     }
 }
-//# sourceMappingURL=index.js.map

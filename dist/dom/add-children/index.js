@@ -7,4 +7,3 @@ export default (dom, children) => {
         // dom.appendChild(childElement)
     });
 };
-//# sourceMappingURL=index.js.map

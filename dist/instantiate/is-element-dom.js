@@ -5,4 +5,3 @@ export default (element) => {
         return true;
     return false;
 };
-//# sourceMappingURL=is-element-dom.js.map

@@ -1,1 +1,0 @@
-{"version":3,"file":"public-instantiate.js","sourceRoot":"","sources":["../../src/instantiate/public-instantiate.ts"],"names":[],"mappings":"AAIA,eAAe,CACb,OAAsB,EACtB,QAA2B,EAChB,EAAE;IACb,MAAM,EAAE,IAAI,EAAE,KAAK,EAAE,GAAG,OAAO,CAAA;IAC/B,MAAM,cAAc,GAAG,IAAI,IAAI,CAAC,KAAK,CAAC,CAAA;IAEtC,cAAc,CAAC,iBAAiB,GAAG,QAAQ,CAAA;IAE3C,OAAO,cAAc,CAAA;AACvB,CAAC,CAAA"}

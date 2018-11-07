@@ -12,4 +12,3 @@ export default (instance, element) => {
     }
     return newChildInstances.filter(instance => instance !== null);
 };
-//# sourceMappingURL=reconcile-children.js.map

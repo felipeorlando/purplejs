@@ -13,4 +13,3 @@ export default (element) => {
     });
     return newInstance;
 };
-//# sourceMappingURL=instantiate-component.js.map

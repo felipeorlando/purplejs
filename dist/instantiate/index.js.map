@@ -1,1 +1,0 @@
-{"version":3,"file":"index.js","sourceRoot":"","sources":["../../src/instantiate/index.ts"],"names":[],"mappings":"AAEA,OAAO,YAAY,MAAM,kBAAkB,CAAA;AAC3C,OAAO,cAAc,MAAM,mBAAmB,CAAA;AAC9C,OAAO,oBAAoB,MAAM,yBAAyB,CAAA;AAE1D,eAAe,CAAC,OAAsB,EAAY,EAAE;IAClD,OAAO,YAAY,CAAC,OAAO,CAAC;QAC1B,CAAC,CAAC,cAAc,CAAC,OAAO,CAAC;QACzB,CAAC,CAAC,oBAAoB,CAAC,OAAO,CAAC,CAAA;AACnC,CAAC,CAAA"}
