@@ -1,0 +1,17 @@
+.input {
+  border-bottom: 2px solid #b5cae3;
+  border-bottom-style: dotted;
+  color: #4a4a4a;
+  font-family: 'Roboto', sans-serif;
+  font-size: 48px;
+  font-weight: 300;
+
+  &__field {
+    border: 0;
+    color: #3393fb;
+    font-weight: 700;
+    margin-left: 10px;
+    text-align: right;
+    width: 112px;
+  }
+}

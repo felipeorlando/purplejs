@@ -1,4 +1,5 @@
 import Purple, { Component } from 'purplejs'
+import './index.scss'
 
 export default class Label extends Component {
   constructor(props) {
@@ -12,7 +13,7 @@ export default class Label extends Component {
     } = this.props
 
     return (
-      <span className="input__info">
+      <span className="label">
         { `R$ ${ maxLimit - definedLimit },00 disponível` }
       </span>
     )

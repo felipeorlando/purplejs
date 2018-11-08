@@ -1,4 +1,5 @@
 import Purple, { Component } from 'purplejs'
+import './index.scss'
 
 export default class Range extends Component {
   render() {

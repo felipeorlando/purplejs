@@ -41,10 +41,10 @@ export default class App extends Component {
     } = this.state
     
     return (
-      <div className="card">
-        <h1 className="card__title">Ajuste de limite</h1>
+      <div className="container">
+        <h1 className="container__title">Ajuste de limite</h1>
 
-        <div className="card__body">
+        <div className="container__body">
           <Input
             definedLimit={definedLimit}
             setDefinedLimit={this.setDefinedLimit} />
