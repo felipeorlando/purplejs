@@ -1,5 +1,6 @@
 import Purple, { Component } from '../../purplejs/dist'
 import LimitLabel from './LimitLabel'
+import 'sanitize.css'
 import './index.scss'
 
 export default class App extends Component {
@@ -26,7 +27,7 @@ export default class App extends Component {
     } = this.state;
     
     return (
-      <div>
+      <div className="card">
         <h1>Ajuste de limite</h1>
 
         <input type="text" value={definedLimit} onChange={this.setDefinedLimit} />
