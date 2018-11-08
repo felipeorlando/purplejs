@@ -5,7 +5,12 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.js --hot --inline --mode development",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "eslint": "eslint",
+    "eslint:all": "eslint ./app",
+    "eslint:fix": "eslint --fix",
+    "stylelint": "stylelint",
+    "stylelint:all": "stylelint ./app",
+    "stylelint:fix": "stylelint --fix"
   },
   "keywords": [
     "nubank",
@@ -30,6 +35,11 @@
     "purplejs": "file:../purplejs",
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
+    "stylelint": "^9.7.1",
+    "stylelint-config-standard": "^18.2.0",
+    "stylelint-order": "^1.0.0",
+    "stylelint-scss": "^3.4.0",
+    "stylelint-selector-bem-pattern": "^2.0.0",
     "webpack": "^4.23.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
