@@ -1,21 +1,6 @@
-import { createElement, Component } from '../../purplejs/dist'
+import Purple, { Component } from '../../purplejs/dist'
+import LimitLabel from './LimitLabel'
 import './index.scss'
-/** @jsx createElement */
-
-class LimitLabel extends Component {
-  constructor(props) {
-    super(props);
-  }
-
-  render() {
-    const {
-      maxLimit,
-      definedLimit
-    } = this.props;
-
-    return <p>{`R$ ${ maxLimit - definedLimit } disponíveis`}</p>;
-  }
-}
 
 export default class App extends Component {
   constructor(props) {
