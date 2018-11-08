@@ -1,0 +1,27 @@
+{
+  "name": "nubank-test",
+  "version": "1.0.0",
+  "description": "Nubank test for UI Engineer",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack-dev-server --config ./webpack.config.js --hot --inline --mode development",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "nubank",
+    "test",
+    "ui",
+    "engineer"
+  ],
+  "author": "Felipe Orlando <fobsouza@gmail.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.1.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-loader": "^8.0.4",
+    "purplejs": "file:../purplejs",
+    "webpack": "^4.23.1",
+    "webpack-cli": "^3.1.2",
+    "webpack-dev-server": "^3.1.10"
+  }
+}
