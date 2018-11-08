@@ -23,6 +23,7 @@
   "devDependencies": {
     "@babel/core": "^7.1.2",
     "@babel/preset-react": "^7.0.0",
+    "autoprefixer": "^9.3.1",
     "babel-loader": "^8.0.4",
     "css-loader": "^1.0.1",
     "eslint": "^5.8.0",
@@ -32,6 +33,7 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "node-sass": "^4.10.0",
+    "postcss-loader": "^3.0.0",
     "purplejs": "file:../purplejs",
     "sanitize.css": "^8.0.0",
     "sass-loader": "^7.1.0",
