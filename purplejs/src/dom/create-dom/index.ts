@@ -1,11 +1,19 @@
 import ElementObject from '../../interfaces/element-object'
 import HTMLElement from '../../interfaces/html-element'
 import addPropsAndEvents from '../add-props-and-events/index'
+import { TEXT_ELEMENT } from '../create-text-element/index'
 
-export default (element: ElementObject | string): HTMLElement | Text => {
-  if (typeof element === 'string') return document.createTextNode(element)
+const isTextElement = (
+  element: ElementObject
+): Boolean => (
+  element.type === TEXT_ELEMENT
+)
 
-  const dom: HTMLElement = document.createElement(element.type as string)
+export default (element: ElementObject): HTMLElement => {
+  const dom: HTMLElement = isTextElement(element)
+    ? document.createTextNode('')
+    : document.createElement(element.type as string)
+    
   const children: Object[] = element.children || []
 
   addPropsAndEvents(element, dom)

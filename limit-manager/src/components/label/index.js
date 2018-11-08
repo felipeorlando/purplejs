@@ -13,9 +13,9 @@ export default class Label extends Component {
     } = this.props
 
     return (
-      <span className="label">
-        { `R$ ${ maxLimit - definedLimit },00 disponível` }
-      </span>
+      <p className="label">
+        R$ <span>{ maxLimit - definedLimit }</span>,00 disponível
+      </p>
     )
   }
 }

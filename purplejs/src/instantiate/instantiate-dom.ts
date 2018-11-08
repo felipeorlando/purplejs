@@ -7,7 +7,7 @@ import appendChildrens from './append-childrens'
 
 export default (element: ElementObject): Instance => {
   const { children } = element
-  const dom: HTMLElement | Text = createDOM(element)
+  const dom: HTMLElement = createDOM(element)
 
   updatePropsAndEvents(dom, element)
   
