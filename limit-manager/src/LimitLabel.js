@@ -11,6 +11,6 @@ export default class LimitLabel extends Component {
       definedLimit
     } = this.props
 
-    return <p>{ `R$ ${ maxLimit - definedLimit } disponíveis` }</p>
+    return <span className="input__info">{ `R$ ${ maxLimit - definedLimit },00 disponível` }</span>
   }
 }

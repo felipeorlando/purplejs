@@ -2,12 +2,155 @@
   box-sizing: border-box;
 }
 
-.body {
+input[type='number'] {
+  -moz-appearance: textfield;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+.root {
+  align-items: center;
   background-color: #f2f2f2;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100%;
 }
 
 .card {
   background-color: #fff;
+  display: flex;
+  flex-direction: column;
   max-width: 362px;
+  min-height: 580px;
   width: 100%;
+
+  &__title {
+    border-bottom: 1px solid rgba(#b5cae3, 0.5);
+    font-family: 'Roboto', sans-serif;
+    font-size: 12px;
+    margin: 0;
+    padding: 21px 0;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__body {
+    align-items: center;
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+
+.input {
+  border-bottom: 2px solid #b5cae3;
+  border-bottom-style: dotted;
+  color: #4a4a4a;
+  font-family: 'Roboto', sans-serif;
+  font-size: 48px;
+  font-weight: 300;
+
+  &__field {
+    border: 0;
+    color: #3393fb;
+    font-weight: 700;
+    margin-left: 10px;
+    text-align: right;
+    width: 112px;
+  }
+
+  &__info {
+    color: #4a4a4a;
+    font-size: 16px;
+    margin-top: 10px;
+  }
+}
+
+// excess height to improve interactive area / accessibility
+$height: 40px;
+$thumb-height: 20px;
+$track-height: 8px;
+
+// colours
+$upper-color: #278bff;
+$lower-color: #b5cae3;
+$thumb-color: #006ae5;
+$thumb-hover-color: pink;
+
+$upper-background: linear-gradient(to bottom, $upper-color, $upper-color) 100% 50% / 100% $track-height no-repeat transparent;
+$lower-background: linear-gradient(to bottom, $lower-color, $lower-color) 100% 50% / 100% $track-height no-repeat transparent;
+
+// Webkit cannot style progress so we fake it with a long shadow
+// on the thumb element
+@function webkit-slider-thumb-shadow($i: 1) {
+  $val: -#{$i}px 0 0 -#{($thumb-height - $track-height) / 2} #{$upper-color};
+
+  @if $i == 1 {
+    @for $k from 2 through 1000 {
+      $val: #{$val}, webkit-slider-thumb-shadow($k);
+    }
+  }
+
+  @return $val;
+}
+
+.range {
+  margin-top: 70px;
+  width: 100%;
+
+  &__body {
+    padding: 0 30px;
+  }
+
+  &__slider {
+    appearance: none;
+    cursor: pointer;
+    display: block;
+    height: $height;
+    margin: 0;
+    overflow: hidden;
+    width: 100%;
+
+    &:focus {
+      outline: none;
+    }
+
+    &::-webkit-slider-runnable-track {
+      background: $lower-background;
+      height: $height;
+      width: 100%;
+    }
+
+    &::-webkit-slider-thumb {
+      appearance: none;
+      background: $thumb-color;
+      border: 0;
+      border-radius: 100%;
+      box-shadow: webkit-slider-thumb-shadow();
+      height: $thumb-height;
+      margin-top: (-$thumb-height/2);
+      position: relative;
+      top: 50%;
+      transform: scale(2);
+      transition: background-color 150ms;
+      width: $thumb-height;
+    }
+  }
+
+  &__values {
+    color: #4a4a4a;
+    display: flex;
+    font-size: 14px;
+    justify-content: space-between;
+  }
+
+  &__value {
+    text-align: center;
+    width: 60px;
+  }
 }
