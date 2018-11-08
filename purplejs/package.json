@@ -1,26 +1,53 @@
 {
-  "name": "nubank-test",
-  "version": "1.0.0",
-  "description": "Nubank test for UI Engineer",
-  "main": "index.js",
+  "name": "purplejs",
+  "version": "0.0.3",
+  "description": "A little bit of React",
+  "main": "dist/index.js",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.js --hot --inline --mode development",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest --config ./jest.config.json",
+    "test:watch": "npm test -- --watch",
+    "test:coverage": "npm test -- --coverage",
+    "lint": "eslint .",
+    "build": "npm run clean && webpack",
+    "compile": "npm run clean && tsc",
+    "clean": "del dist"
   },
   "keywords": [
+    "react",
+    "purplejs",
     "nubank",
-    "test",
-    "ui",
-    "engineer"
+    "💜"
   ],
   "author": "Felipe Orlando <fobsouza@gmail.com>",
   "license": "MIT",
+  "standard": {
+    "parser": "typescript-eslint-parser",
+    "plugins": [
+      "typescript"
+    ]
+  },
   "devDependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/preset-react": "^7.0.0",
-    "babel-loader": "^8.0.4",
-    "purplejs": "file:../purplejs",
-    "webpack": "^4.23.1",
+    "@types/jest": "^23.3.9",
+    "@types/jest-plugin-context": "^2.9.0",
+    "awesome-typescript-loader": "^5.2.1",
+    "del-cli": "^1.1.0",
+    "eslint": "^5.8.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^21.26.2",
+    "eslint-plugin-node": "^8.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "eslint-plugin-typescript": "^0.12.0",
+    "jest": "^23.6.0",
+    "jest-plugin-context": "^2.9.0",
+    "source-map-loader": "^0.2.4",
+    "ts-jest": "^23.10.4",
+    "ts-loader": "^5.2.2",
+    "typescript": "^3.1.6",
+    "typescript-eslint-parser": "^20.0.0",
+    "webpack": "^4.25.1",
     "webpack-cli": "^3.1.2",
     "webpack-dev-server": "^3.1.10"
   }

@@ -1,27 +1,26 @@
-const webpack = require('webpack');
+const path = require('path')
 
 module.exports = {
-  entry: './src/index.js',
+  entry: './src/index.tsx',
   module: {
     rules: [
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: ['babel-loader']
-      }
+      { test: /\.tsx?$/, loader: 'awesome-typescript-loader' },
+      { enforce: 'pre', test: /\.js$/, loader: 'source-map-loader' }
     ]
   },
   resolve: {
-    extensions: ['*', '.js', '.jsx']
+    extensions: [ '.ts', '.js' ]
   },
   output: {
-    path: __dirname + '/dist',
-    publicPath: '/',
-    filename: 'index.js'
+    filename: 'index.js',
+    path: path.resolve(__dirname, 'dist'),
+    libraryTarget: 'umd',
+    library: 'Purple',
+    umdNamedDefine: true
   },
   devServer: {
     contentBase: './dist',
     hot: true,
     inline: true
   }
-};
+}
