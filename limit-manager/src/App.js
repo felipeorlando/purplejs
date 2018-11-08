@@ -1,7 +1,7 @@
 import Purple, { Component } from '../../purplejs/dist'
-import LimitLabel from './LimitLabel'
-import LimitInput from './LimitInput'
-import LimitRange from './LimitRange'
+import Label from './components/label'
+import Input from './components/input'
+import Range from './components/range'
 
 import 'sanitize.css'
 import './index.scss'
@@ -45,13 +45,13 @@ export default class App extends Component {
         <h1 className="card__title">Ajuste de limite</h1>
 
         <div className="card__body">
-          <LimitInput
+          <Input
             definedLimit={definedLimit}
             setDefinedLimit={this.setDefinedLimit} />
 
-          <LimitLabel maxLimit={maxLimit} definedLimit={definedLimit} />
+          <Label maxLimit={maxLimit} definedLimit={definedLimit} />
 
-          <LimitRange
+          <Range
             maxLimit={maxLimit}
             definedLimit={definedLimit} 
             setDefinedLimit={this.setDefinedLimit} />

@@ -1,6 +1,6 @@
 import Purple, { Component } from 'purplejs'
 
-export default class LimitInput extends Component {
+export default class Input extends Component {
   render() {
     const { definedLimit, setDefinedLimit } = this.props
     const { inputClass } = this.state

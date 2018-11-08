@@ -1,6 +1,6 @@
 import Purple, { Component } from 'purplejs'
 
-export default class LimitRange extends Component {
+export default class Range extends Component {
   render() {
     const {
       maxLimit,
