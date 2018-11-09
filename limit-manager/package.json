@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "webpack-dev-server --config ./webpack.config.js --hot --inline --mode development",
+    "build": "webpack",
     "eslint": "eslint",
     "eslint:all": "eslint ./app",
     "eslint:fix": "eslint --fix",
