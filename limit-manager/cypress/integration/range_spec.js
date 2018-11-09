@@ -1,6 +1,6 @@
 describe('Range Test', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:8080/')
+    cy.visit('/')
   })
 
   context('when change the value', () => {
