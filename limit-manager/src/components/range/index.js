@@ -19,7 +19,7 @@ export default class Range extends Component {
             max={maxLimit}
             value={definedLimit}
             onChange={setDefinedLimit}
-            step="10" />
+            step="100" />
         </div>
 
         <div className="range__values">

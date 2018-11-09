@@ -14,7 +14,7 @@ export default class Label extends Component {
 
     return (
       <p className="label">
-        R$ <span>{ maxLimit - definedLimit }</span>,00 disponível
+        R$ <strong>{ maxLimit - definedLimit }</strong>,00 disponível
       </p>
     )
   }
