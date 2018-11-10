@@ -5,10 +5,9 @@ describe('dom addPropsAndEvents', () => {
     it('should have a dom element with children empty', () => {
       const element = { type: 'div', props: null, children: null }
       const dom = document.createElement(element.type)
+      const emptyDOM = document.createElement(element.type)
       
-      const modifiedDOM = addPropsAndEvents(element, dom)
-
-      expect(modifiedDOM).toEqual(dom)
+      expect(dom).toEqual(emptyDOM)
     })
   })
 
@@ -18,9 +17,9 @@ describe('dom addPropsAndEvents', () => {
       const element = { type: 'div', props, children: null }
       const dom = document.createElement(element.type)
 
-      const modifiedDOM = addPropsAndEvents(element, dom)
+      addPropsAndEvents(element, dom)
     
-      expect(modifiedDOM.className).toEqual(props.className)
+      expect(dom.className).toEqual(props.className)
     })
   })
 
@@ -30,9 +29,9 @@ describe('dom addPropsAndEvents', () => {
       const element = { type: 'div', props, children: null }
       const dom = document.createElement(element.type)
     
-      const modifiedDOM = addPropsAndEvents(element, dom)
+      addPropsAndEvents(element, dom)
 
-      expect(modifiedDOM.onchange).toBeNull()
+      expect(dom.onchange).toBeNull()
     })
   })
 })

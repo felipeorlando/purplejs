@@ -4,7 +4,7 @@ describe('createElement', () => {
   context('when element is a simple div', () => {
     it('returns type as div without props', () => {
       const result = createElement('div', null)
-      expect(result).toEqual({ type: 'div', props: null, children: null })
+      expect(result).toEqual({ type: 'div', props: null, children: [] })
     })
   })
 
@@ -14,7 +14,7 @@ describe('createElement', () => {
       expect(result).toEqual({
         type: 'div', 
         props: { className: 'purple' },
-        children: null,
+        children: [],
       })
     })
   })
@@ -31,8 +31,8 @@ describe('createElement', () => {
         type: 'div', 
         props: null,
         children: [
-          { type: 'p', props: null, children: null },
-          { type: 'p', props: null, children: null },
+          { type: 'p', props: null, children: [] },
+          { type: 'p', props: null, children: [] },
         ]
       })
     })
@@ -45,10 +45,15 @@ describe('createElement', () => {
         null,
         'Paragraph',
       )
+      const children = [{
+        type: 'TEXT_ELEMENT',
+        props: {nodeValue: 'Paragraph'},
+        children: [],
+      }];
       expect(result).toEqual({
-        type: 'p', 
-        props: null,
-        children: ['Paragraph'],
+        type: 'p',
+        props: null, 
+        children, 
       })
     })
   })

@@ -8,10 +8,10 @@ describe('dom updatePropsAndEvents', () => {
       const newElement = { type: 'div', props: { id: 'revolution' } }
       const instance = instantiate(element)
   
-      const result = updatePropsAndEvents(instance.dom, newElement)
+      updatePropsAndEvents(instance.dom, newElement)
   
-      expect(result.className).toEqual('purple')
-      expect(result.id).toEqual('revolution')
+      expect(instance.dom.className).toEqual('purple')
+      expect(instance.dom.id).toEqual('revolution')
     })
 
     it('should update existing props', () => {
@@ -19,9 +19,9 @@ describe('dom updatePropsAndEvents', () => {
       const newElement = { type: 'div', props: { className: 'revolution' } }
       const instance = instantiate(element)
   
-      const result = updatePropsAndEvents(instance.dom, newElement)
+      updatePropsAndEvents(instance.dom, newElement)
   
-      expect(result.className).toEqual('revolution')
+      expect(instance.dom.className).toEqual('revolution')
     })
   })
 
@@ -31,9 +31,9 @@ describe('dom updatePropsAndEvents', () => {
       const newElement = { type: 'div', props: { id: 'revolution' } }
       const instance = instantiate(element)
   
-      const result = updatePropsAndEvents(instance.dom, newElement, element)
+      updatePropsAndEvents(instance.dom, newElement, element)
   
-      expect(result.className).toEqual('null')
+      expect(instance.dom.className).toEqual('null')
     })
   })
 })

@@ -18,6 +18,6 @@ export default class Component {
   }
 
   updateInternalInstance(instance: Instance): void {
-    updateInstance(instance)
+    return updateInstance(instance)
   }
 }

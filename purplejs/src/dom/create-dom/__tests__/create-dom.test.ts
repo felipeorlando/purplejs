@@ -1,10 +1,11 @@
 import HTMLElement from '../../../interfaces/html-element'
+import { TEXT_ELEMENT } from '../../create-text-element/index';
 import createDOM from '../index'
 
 describe('dom createDOM', () => {
   context('when element is string', () => {
     it('should return a text node', () => {
-      const dom = createDOM('purple')
+      const dom = createDOM({ type: TEXT_ELEMENT, props: { nodeValue: 'purple' } })
 
       expect(dom.nodeName).toEqual('#text')
       expect(dom.nodeValue).toEqual('purple')
