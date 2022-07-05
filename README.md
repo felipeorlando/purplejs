@@ -1,6 +1,4 @@
-# Nubank UI Engineer test
-
-Live Demo: [https://nubank.netlify.com](https://nubank.netlify.com)
+# Purple.JS
 
 > **TL;DR:** run `npm start` on `limit-manager` directory
 
