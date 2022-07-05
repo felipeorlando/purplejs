@@ -2,9 +2,7 @@
 
 > **TL;DR:** run `npm start` on `limit-manager` directory
 
-So, that's it. This is my technical test submission for UI Engineer position process.
-
-This test is splited in two parts, in two directories:
+This code is splited in two parts, in two directories:
 
 - `purplejs`: Is the mini-react library, coded with Typescript.
 - `limit-manager`: The Limit Manager proposed by use the PurpleJS lib to render a simple app.
