@@ -4,13 +4,13 @@
 
 This code is splited in two parts, in two directories:
 
-- `purplejs`: Is the mini-react library, coded with Typescript.
-- `limit-manager`: The Limit Manager proposed by use the PurpleJS lib to render a simple app.
+- `purplejs`: Is the mini-react library, made with Typescript.
+- `limit-manager`: The Limit Manager proposed to use the PurpleJS lib to render a simple app.
 
 Follow the infos and instructions separed by project:
 
 ## PurpleJS
-I choosed to use Typescript, that is a library with lot of similarities to Javascript.
+I chose to use Typescript, because of the similarities to Javascript adding type safety.
 
 The main concepts of the PurpleJS is element, instance and reconcile:
 - `element`: is the JSX translated into and object;
